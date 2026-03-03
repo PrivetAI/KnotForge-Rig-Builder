@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct WinterFishingKnotsApp: App {
+struct KnotForgeRigBuilderApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
