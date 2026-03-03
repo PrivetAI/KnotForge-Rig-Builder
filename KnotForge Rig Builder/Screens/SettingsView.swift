@@ -1,8 +1,31 @@
 import SwiftUI
+import WebKit
+
+// MARK: - Privacy Policy WebView
+struct PrivacyPolicyView: View {
+    @Environment(\.presentationMode) var presentationMode
+    let urlString = "https://www.freeprivacypolicy.com/live/904c6577-4ec6-47d7-b387-16f6127a73d2"
+
+    var body: some View {
+        NavigationView {
+            KnotForgeWebPanel(urlString: urlString)
+                .edgesIgnoringSafeArea(.bottom)
+                .navigationBarTitle("Privacy Policy", displayMode: .inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button("Done") { presentationMode.wrappedValue.dismiss() }
+                            .foregroundColor(AppTheme.accent)
+                    }
+                }
+        }
+        .forcedAppearance()
+    }
+}
 
 // MARK: - About / Info View (accessible from gear icon in header)
 struct AboutView: View {
     @Environment(\.presentationMode) var presentationMode
+    @State private var showPrivacyPolicy = false
 
     var body: some View {
         NavigationView {
@@ -63,11 +86,28 @@ struct AboutView: View {
                             .padding(.top, 4)
                     }
 
+                    BlueprintCard {
+                        Button(action: { showPrivacyPolicy = true }) {
+                            HStack {
+                                Text("Privacy Policy")
+                                    .font(.system(size: 11, weight: .semibold, design: .monospaced))
+                                    .foregroundColor(AppTheme.accent)
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .font(.system(size: 10))
+                                    .foregroundColor(AppTheme.iceBlue.opacity(0.5))
+                            }
+                        }
+                    }
+
                     Spacer(minLength: 20)
                 }
                 .padding(16)
             }
             .background(AppTheme.surfaceBg.edgesIgnoringSafeArea(.all))
+            .sheet(isPresented: $showPrivacyPolicy) {
+                PrivacyPolicyView()
+            }
             .navigationBarTitle("About", displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

@@ -29,6 +29,9 @@
 		B10000000000000000000020 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000020 /* SettingsView.swift */; };
 		B10000000000000000000021 /* WaterBodiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000021 /* WaterBodiesView.swift */; };
 		B10000000000000000000022 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000022 /* click.wav */; };
+		B10000000000000000000023 /* KnotForgeWebPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000023 /* KnotForgeWebPanel.swift */; };
+		B10000000000000000000024 /* KnotForgeRedirectWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000024 /* KnotForgeRedirectWatcher.swift */; };
+		B10000000000000000000025 /* KnotForgeLoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000025 /* KnotForgeLoadingScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		B20000000000000000000020 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B20000000000000000000021 /* WaterBodiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterBodiesView.swift; sourceTree = "<group>"; };
 		B20000000000000000000022 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
+		B20000000000000000000023 /* KnotForgeWebPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnotForgeWebPanel.swift; sourceTree = "<group>"; };
+		B20000000000000000000024 /* KnotForgeRedirectWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnotForgeRedirectWatcher.swift; sourceTree = "<group>"; };
+		B20000000000000000000025 /* KnotForgeLoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnotForgeLoadingScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,9 @@
 			children = (
 				B20000000000000000000001 /* KnotForgeRigBuilderApp.swift */,
 				B20000000000000000000002 /* ContentView.swift */,
+				B20000000000000000000023 /* KnotForgeWebPanel.swift */,
+				B20000000000000000000024 /* KnotForgeRedirectWatcher.swift */,
+				B20000000000000000000025 /* KnotForgeLoadingScreen.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -251,6 +260,9 @@
 				B10000000000000000000019 /* ExportView.swift in Sources */,
 				B10000000000000000000020 /* SettingsView.swift in Sources */,
 				B10000000000000000000021 /* WaterBodiesView.swift in Sources */,
+				B10000000000000000000023 /* KnotForgeWebPanel.swift in Sources */,
+				B10000000000000000000024 /* KnotForgeRedirectWatcher.swift in Sources */,
+				B10000000000000000000025 /* KnotForgeLoadingScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
